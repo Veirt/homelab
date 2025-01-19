@@ -2,6 +2,8 @@ resource "proxmox_vm_qemu" "hephaestus" {
   name = "hephaestus"
   desc = ""
 
+  onboot = false
+
   agent                  = 1
   automatic_reboot       = true
   boot                   = "order=scsi0"
@@ -13,7 +15,6 @@ resource "proxmox_vm_qemu" "hephaestus" {
   balloon                = 4096
   memory                 = 8192
   numa                   = false
-  onboot                 = true
   qemu_os                = "win10"
   scsihw                 = "virtio-scsi-single"
   vm_state               = "stopped"

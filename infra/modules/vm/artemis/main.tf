@@ -2,6 +2,8 @@ resource "proxmox_vm_qemu" "artemis" {
   name = "artemis"
   desc = ""
 
+  onboot = false
+
   agent                  = 1
   automatic_reboot       = true
   boot                   = "order=scsi0"
@@ -14,7 +16,6 @@ resource "proxmox_vm_qemu" "artemis" {
   balloon                = 8192
   memory                 = 11264
   numa                   = false
-  onboot                 = true
   qemu_os                = "win10"
   scsihw                 = "virtio-scsi-pci"
   vm_state               = "stopped"
