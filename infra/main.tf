@@ -37,3 +37,7 @@ module "hera" {
 module "hephaestus" {
   source = "./modules/vm/hephaestus"
 }
+
+module "althea" {
+  source = "./modules/vm/althea"
+}
